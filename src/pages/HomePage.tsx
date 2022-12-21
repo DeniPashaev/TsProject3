@@ -9,7 +9,7 @@ export function HomePage () {
     <div className="flex justify-center pt-10 mx-auto h-screen w-screen">
         {isError && <p className="text-center text-red-600">Errored check your wifu</p>}
         <div>
-           <input type="text"
+           <input type="text" //error: 407
            />
         </div>
     </div>
