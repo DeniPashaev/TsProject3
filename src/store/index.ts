@@ -10,3 +10,5 @@ export const store = configureStore( {
 })
 
 setupListeners(store.dispatch)
+
+//delete - getDefaultMiddleware, outdated method
