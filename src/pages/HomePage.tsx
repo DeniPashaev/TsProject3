@@ -18,7 +18,7 @@ export function HomePage() {
   }, [debounced, data]);
 
   const clickHandler = (username: string) => {
-    console.log(username);
+    fetchRepos(username);
     
   }
 
@@ -50,6 +50,9 @@ export function HomePage() {
               ))}
             </ul>
           )}
+          <div className="container">
+          { areReposLoading && <p className="text-center">Repose</p>}
+        </div>
         </div>
       </div>
     </>
