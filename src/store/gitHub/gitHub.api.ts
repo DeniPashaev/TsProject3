@@ -1,3 +1,4 @@
+import { Irepo } from './../../models/modeles';
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { IUser, ServerResponse } from "../../models/modeles";
 
@@ -17,7 +18,7 @@ export const githubApi = createApi({
       }),
       transformResponse: (response: ServerResponse<IUser>) => response.items
     }),
-    getUserRepos: build.query<any, string> ({
+    getUserRepos: build.query<Irepo[], string> ({
       query: (username: string) => ({
         url: `users/${username}/repos`
       })

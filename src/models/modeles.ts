@@ -25,3 +25,7 @@
         incomplete_results: boolean;
         items: T[];
     }
+
+    export interface Irepo {
+      url: string;
+    }

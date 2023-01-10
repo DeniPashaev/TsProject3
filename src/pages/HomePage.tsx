@@ -52,6 +52,7 @@ export function HomePage() {
           )}
           <div className="container">
           { areReposLoading && <p className="text-center">Repose</p>}
+          {repos?.map(repo => <p>{repo.url}</p>)}
         </div>
         </div>
       </div>
