@@ -17,7 +17,7 @@
         received_events_url: string;
         type: string;
         site_admin: boolean;
-      //  score: number;
+        score: number;
     }
 
     export interface ServerResponse<T> {
@@ -28,4 +28,10 @@
 
     export interface Irepo {
       url: string;
+      full_name: string;
+      forks: number;
+      watchers: number;
+      description: string;
+      id: number;
+      html_url: string;
     }
