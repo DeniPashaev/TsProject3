@@ -1,4 +1,4 @@
-import { Irepo } from './../../models/modeles';
+import { Irepo } from "./../../models/modeles";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { IUser, ServerResponse } from "../../models/modeles";
 
@@ -12,21 +12,21 @@ export const githubApi = createApi({
       query: (search: string) => ({
         url: "search/users",
         params: {
-            q: search,
-            per_page: 10
-        }
+          q: search,
+          per_page: 10,
+        },
       }),
-      transformResponse: (response: ServerResponse<IUser>) => response.items
+      transformResponse: (response: ServerResponse<IUser>) => response.items,
     }),
-    getUserRepos: build.query<Irepo[], string> ({
+    getUserRepos: build.query<Irepo[], string>({
       query: (username: string) => ({
-        url: `users/${username}/repos`
-      })
+        url: `users/${username}/repos`,
+      }),
     }),
     createUser: build.mutation<any, void>({
-      query: () => ""
-    })
+      query: () => "",
+    }),
   }),
 });
 
-export const {useSearchUsersQuery, useLazyGetUserReposQuery} = githubApi
+export const { useSearchUsersQuery, useLazyGetUserReposQuery } = githubApi;
