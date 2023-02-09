@@ -4,10 +4,8 @@ export function FavPage () {
     return (
         <>
             <div className="font-bold">
-        fav
+        Favorite pages
             </div>
         </>
     )
 }
-
-//return scorr
